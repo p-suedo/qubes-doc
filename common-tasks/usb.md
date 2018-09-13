@@ -398,7 +398,8 @@ Removing a USB qube
  5. If `rd.qubes.hide_all_usb` appears anywhere in those lines, remove it.
  6. Save and close the file.
  7. Run the command `grub2-mkconfig -o /boot/grub2/grub.cfg` in dom0.
- 8. Reboot.
+ 8. Remove `/etc/systemd/system/multi-user.target.wants/qubes-vm@sys-usb.service`
+ 9. Reboot.
 
  * EFI
  
@@ -408,7 +409,8 @@ Removing a USB qube
  4. Find the line(s) that begins with `kernel=`.
  5. If `rd.qubes.hide_all_usb` appears anywhere in those lines, remove it.
  6. Save and close the file.
- 7. Reboot.
+ 7. Remove `/etc/systemd/system/multi-user.target.wants/qubes-vm@sys-usb.service`
+ 8. Reboot.
 
 Security Warning about USB Input Devices
 ----------------------------------------
